@@ -13,7 +13,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 
 // Material-UI Style provider dependencies
 import { ThemeProvider } from '@material-ui/core/styles';
-import theme from './styles/materialThemes';
+import { defaultTheme } from './styles/materialThemes';
 
 // React Application entry-point
 import App from './App';
@@ -26,10 +26,10 @@ const reduxStore = createStore(
 
 // places the react application on the DOM
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={defaultTheme}>
     <ReduxProvider store={reduxStore}>
       <App />
     </ReduxProvider>
-  </ThemeProvder>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
